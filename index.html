@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nuviaweb</title>
+    <link rel="icon" type="image/x-icon" href="images/nuvia-high-resolution-favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Nuvia Logo" class="logo-image">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-en="Home" data-ro="Acasă">Home</a></li>
+                <li><a href="#services" data-en="Services" data-ro="Servicii">Services</a></li>
+                <li><a href="#about" data-en="About" data-ro="Despre">About</a></li>
+                <li><a href="#contact" data-en="Contact" data-ro="Contact">Contact</a></li>
+            </ul>
+            <button class="language-toggle" id="languageToggle">EN</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title" data-en="Beautiful websites for beautiful stories." data-ro="Site-uri web frumoase pentru povești frumoase.">Beautiful websites for beautiful stories.</h1>
+            <p class="hero-subtitle" data-en="We create personal websites for families, couples, and special moments — so your memories can live forever online." data-ro="Creăm site-uri web personalizate pentru familii, cupluri și momente speciale — pentru ca amintirile tale să trăiască online pentru totdeauna.">
+                We create personal websites for families, couples, and special moments —
+                so your memories can live forever online.
+            </p>
+            <a href="https://docs.google.com/forms/d/1_wTk6n6ixHQzo67m0mretRTc2AP0vRLOIZZxcLuHaHw/edit?pli=1" target="_blank" class="cta-button" id="mainCTA">
+                <span class="button-text" data-en="Build a gift" data-ro="Creează un cadou">Build a gift</span>
+                <span class="button-shine"></span>
+            </a>
+        </div>
+        <video class="hero-background" autoplay muted playsinline id="heroVideo">
+            <source src="images/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-darken-overlay" id="videoDarkenOverlay"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-en="What we create" data-ro="Ce creăm">What we create</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🩷</div>
+                    <h3 data-en="Websites for couples" data-ro="Site-uri pentru cupluri">Websites for couples</h3>
+                    <p data-en="Celebrate your love story with photos, messages, and memories." data-ro="Sărbătorește-ți povestea de dragoste cu fotografii, mesaje și amintiri.">Celebrate your love story with photos, messages, and memories.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧</div>
+                    <h3 data-en="Family websites" data-ro="Site-uri pentru familie">Family websites</h3>
+                    <p data-en="Keep your family history, generations, and shared moments in one beautiful place." data-ro="Păstrează istoria familiei, generațiile și momentele împărtășite într-un singur loc frumos.">Keep your family history, generations, and shared moments in one beautiful place.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎁</div>
+                    <h3 data-en="Special gifts" data-ro="Cadouri speciale">Special gifts</h3>
+                    <p data-en="Create a one-of-a-kind surprise website for birthdays, anniversaries, or just because." data-ro="Creează un site-surpriză unic pentru zile de naștere, aniversări sau pur și simplu de dragul momentului.">Create a one-of-a-kind surprise website for birthdays, anniversaries, or just because.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-en="Why Choose Us" data-ro="De ce să ne alegi">Why Choose Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-en="Super easy" data-ro="Foarte ușor">Expert Team</h3>
+                    <p data-en="Send us your story and photos, and we’ll build the whole experience for you.  You relax — we create." data-ro="Trimite-ne povestea și fotografiile tale, iar noi vom construi întreaga experiență pentru tine.  Tu te relaxezi — noi creăm.">Our team of experienced developers and designers work together to bring your vision to life. We combine creativity with technical expertise to deliver exceptional results.</p>
+                    <h3 data-en="Beautiful and emotional" data-ro="Frumos și emoționant">Modern Technology</h3>
+                    <p data-en="A website that makes you smile every time you open it." data-ro="Un website care te face să zâmbești de fiecare dată când îl deschizi.">We use the latest web technologies and best practices to ensure your website is future-proof and scalable.</p>
+                    <h3 data-en="Unique gift" data-ro="Cadou unic">Modern Technology</h3>
+                    <p data-en="A personal and exclusive website, made just for you." data-ro="Un website personal și exclusiv, creat doar pentru tine.">We use the latest web technologies and best practices to ensure your website is future-proof and scalable.</p>
+
+                </div>
+                <div class="portfolio">
+                    <h3 class="portfolio-title" data-en="Our Portfolio" data-ro="Portofoliul nostru">Our Portfolio</h3>
+                    <div class="portfolio-grid">
+                        <a href="https://example.com/portfolio1" target="_blank" class="portfolio-item">
+                            <div class="portfolio-image">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-link-text" data-en="View Website →" data-ro="Vezi site-ul →">View Website →</span>
+                                </div>
+                            </div>
+                            <h4 data-en="Elegant Wedding Site" data-ro="Site de nuntă elegant">Elegant Wedding Site</h4>
+                            <p data-en="Beautiful couple's website with photo gallery" data-ro="Site frumos pentru cuplu cu galerie foto">Beautiful couple's website with photo gallery</p>
+                        </a>
+                        <a href="https://example.com/portfolio2" target="_blank" class="portfolio-item">
+                            <div class="portfolio-image">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-link-text" data-en="View Website →" data-ro="Vezi site-ul →">View Website →</span>
+                                </div>
+                            </div>
+                            <h4 data-en="Family Heritage Site" data-ro="Site de patrimoniu familial">Family Heritage Site</h4>
+                            <p data-en="Multi-generational family history website" data-ro="Site de istorie familială multi-generațional">Multi-generational family history website</p>
+                        </a>
+                        <a href="https://example.com/portfolio3" target="_blank" class="portfolio-item">
+                            <div class="portfolio-image">
+                                <div class="portfolio-overlay">
+                                    <span class="portfolio-link-text" data-en="View Website →" data-ro="Vezi site-ul →">View Website →</span>
+                                </div>
+                            </div>
+                            <h4 data-en="Anniversary Gift Site" data-ro="Site cadou aniversar">Anniversary Gift Site</h4>
+                            <p data-en="Special 25th anniversary celebration website" data-ro="Site special pentru aniversarea a 25 de ani">Special 25th anniversary celebration website</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In Touch" data-ro="Contactează-ne">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-email-label" data-en="Email us at:" data-ro="Trimite-ne un email la:">Email us at:</p>
+                    <a href="mailto:contact@example.com" class="contact-email">contact@example.com</a>
+                </div>
+                <div class="contact-divider" data-en="or" data-ro="sau">or</div>
+                <a href="https://docs.google.com/forms/d/1_wTk6n6ixHQzo67m0mretRTc2AP0vRLOIZZxcLuHaHw/edit?pli=1" target="_blank" class="cta-button secondary contact-form-link">
+                    <span class="button-text" data-en="Fill Out Our Form" data-ro="Completează formularul nostru">Fill Out Our Form</span>
+                    <span class="button-shine"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-en="&copy; 2024 WebCraft Pro. All rights reserved." data-ro="&copy; 2024 WebCraft Pro. Toate drepturile rezervate.">&copy; 2024 WebCraft Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
