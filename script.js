@@ -250,3 +250,4 @@ const savedLanguage = localStorage.getItem('preferredLanguage');
 if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'ro')) {
     switchLanguage(savedLanguage);
 }
+
