@@ -91,6 +91,48 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
     portfolioObserver.observe(item);
 });
 
+// Animate product cards on scroll
+const productObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 150);
+            productObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe product cards
+document.querySelectorAll('.product-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    productObserver.observe(card);
+});
+
+// Animate process steps on scroll
+const processObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 200);
+            processObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe process steps
+document.querySelectorAll('.process-step').forEach(step => {
+    step.style.opacity = '0';
+    step.style.transform = 'translateY(30px)';
+    step.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    processObserver.observe(step);
+});
+
 // Add parallax effect to hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
@@ -105,6 +147,29 @@ const heroVideo = document.getElementById('heroVideo');
 const videoDarkenOverlay = document.getElementById('videoDarkenOverlay');
 
 if (heroVideo) {
+    // Preload video to avoid flash
+    heroVideo.load();
+    
+    // Fade in video when it's ready to play
+    heroVideo.addEventListener('canplay', function() {
+        this.classList.add('loaded');
+    });
+    
+    // Also fade in when data is loaded (backup)
+    heroVideo.addEventListener('loadeddata', function() {
+        this.classList.add('loaded');
+    });
+    
+    // Fade in when video can start playing
+    heroVideo.addEventListener('loadedmetadata', function() {
+        this.classList.add('loaded');
+    });
+    
+    // If video is already ready, fade in immediately
+    if (heroVideo.readyState >= 2) {
+        heroVideo.classList.add('loaded');
+    }
+    
     heroVideo.addEventListener('ended', function() {
         // Pause the video permanently
         this.pause();
